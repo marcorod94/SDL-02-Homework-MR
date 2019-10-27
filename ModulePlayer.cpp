@@ -72,11 +72,11 @@ update_status ModulePlayer::Update()
 	// make sure to detect player movement and change its
 	// position while cycling the animation(check Animation.h)
 	if (App->input->GetKey(SDL_SCANCODE_RIGHT)) {
-		App->renderer->Blit(App->player->graphics, App->player->position.x, App->player->position.y, &(App->player->forward.GetCurrentFrame()), 0.0008f);
+		App->renderer->Blit(graphics, position.x, position.y, &(forward.GetCurrentFrame()), 0.0008f);
 	} else if (App->input->GetKey(SDL_SCANCODE_LEFT)) {
-		App->renderer->Blit(App->player->graphics, App->player->position.x, App->player->position.y, &(App->player->backward.GetCurrentFrame()), 0.0008f);
+		App->renderer->Blit(graphics, position.x, position.y, &(backward.GetCurrentFrame()), 0.0008f);
 	} else {
-		App->renderer->Blit(App->player->graphics, App->player->position.x, App->player->position.y, &(App->player->idle.GetCurrentFrame()), 0.0008f);
+		App->renderer->Blit(graphics, position.x, position.y, &(idle.GetCurrentFrame()), 0.0008f);
 	}
 	return UPDATE_CONTINUE;
 }

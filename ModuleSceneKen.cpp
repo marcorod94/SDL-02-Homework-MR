@@ -83,15 +83,15 @@ update_status ModuleSceneKen::Update()
 	
 	// Draw everything --------------------------------------
 	// TODO 1: Tweak the movement speed of the sea&sky + flag to your taste
-	App->renderer->Blit(graphics, 0, 0, &background, 2.0f); // sea and sky
-	App->renderer->Blit(graphics, 560, 8, &(flag.GetCurrentFrame()), 2.0f); // flag animation
+	App->renderer->Blit(graphics, 0, 0, &background, 2.0F); // sea and sky
+	App->renderer->Blit(graphics, 560, 8, &(flag.GetCurrentFrame()), 2.0F); // flag animation
 	
 	// TODO 3: Draw the ship. Be sure to tweak the speed.
-	App->renderer->Blit(graphics, 0, 0, &(ship.GetCurrentFrame()), 2.0f);
+	App->renderer->Blit(graphics, 0, 0, &(ship.GetCurrentFrame()), 2.0F);
 
 	// TODO 6: Draw the girl. Make sure it follows the ship movement!
-	App->renderer->Blit(graphics, 192, 105, &(girl.GetCurrentFrame()), 2.0f);
-	App->renderer->Blit(graphics, 0, 170, &ground, 2.0f);
+	App->renderer->Blit(graphics, 192, 105, &(girl.GetCurrentFrame()), 2.0F);
+	App->renderer->Blit(graphics, 0, 170, &ground, 2.0F);
 	App->player->Update();
 	// TODO 10: Build an entire new scene "honda", you can find its
 	// and music in the Game/ folder
@@ -99,7 +99,7 @@ update_status ModuleSceneKen::Update()
 	// TODO 11: Make that pressing space triggers a switch to honda logic module
 	// using FadeToBlack module
 	if (App->input->GetKey(SDL_SCANCODE_SPACE)) {
-		App->fade->FadeToBlack(App->scene_honda, App->scene_ken, 3.0f);
+		App->fade->FadeToBlack(App->scene_honda, App->scene_ken, 3.0F);
 	}
 	return UPDATE_CONTINUE;
 }
